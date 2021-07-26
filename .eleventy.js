@@ -1,3 +1,3 @@
 module.exports = function(eleventyConfig) {
-    eleventyConfig.setTemplateFormats(["md","css","png"])
+    eleventyConfig.setTemplateFormats(["md","css","png","jpg"])
 }
