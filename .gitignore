@@ -1,1 +1,4 @@
 _site/
+.firebase/
+.firebaserc
+.idea/
