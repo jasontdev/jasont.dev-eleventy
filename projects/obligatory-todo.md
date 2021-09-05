@@ -5,7 +5,7 @@ description: 'What developer portfolio could be complete without a to-do app? Us
 Firebase for persistence and authentication. Event-driven architecture.'
 layout: post.liquid
 date: 2021-09-03 18:46:00 +10:00
-cardimg: /img/projects/obligatory-todo/oblig-todo-screen.png
+cardimg: /img/projects/obligatory-todo/obligatory-todo-screen.png
 ---
 ![Screenshot of jasont.dev rendered on mobile](/img/projects/obligatory-todo/obligatory-todo-screen.png)  
 *Obligatory Todo rendered on mobile.*  
