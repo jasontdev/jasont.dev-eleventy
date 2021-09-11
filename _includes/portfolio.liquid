@@ -1,57 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jason Telfer - {{ title }}</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <div class="container">
-      <header>
-        <div class="d-flex justify-content-between">
-          <a href="#" class="navbar-brand text-dark">jasont.dev</a>
-          <nav class="nav">
-            <a href="/" class="nav-link">About</a>
-            <a href="/blog" class="nav-link">Blog</a>
-            <a href="/portfolio" class="nav-link">Portfolio</a>
-          </nav>
-        </div>
-      </header>
 
-      <main>
-        <div class="mt-5 px-2">
-          <h1>Portfolio</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jason Telfer - {{ title }}</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="d-flex justify-content-between">
+        <a href="#" class="navbar-brand text-dark">jasont.dev</a>
+        <nav class="nav">
+          <a href="/" class="nav-link">About</a>
+          <a href="/blog" class="nav-link">Blog</a>
+          <a href="/portfolio" class="nav-link">Portfolio</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="mt-5 px-2">
+        <h1>Portfolio</h1>
+        <div class="d-flex flex-wrap justify-content-around">
           {%- for post in collections.project reversed -%}
-          <div class="card mt-3">
+          <div class="card mt-3" style="width: 19rem;">
+            <img class="card-img-top" src="{{ post.data.cardimg }}" alt="" class="card-img-top">
             <div class="card-body">
-              <div class="card-title"><h3>{{ post.data.title }}</h3></div>
-              <div class="card-img-top">
-                <img src="{{ post.data.cardimg }}" alt="" class="card-img-top" style="width: 300px; height: 300px;">
-              </div>
-              <div class="card-text">{{ post.data.description }}</div>
+              <h3 class="card-title">{{ post.data.title }}</h3>
+              <p class="card-text">{{ post.data.description }}</p>
+              <a class="btn btn-primary" href="{{ post.url }}">Show more</a>
             </div>
-            <a class="btn btn-primary" href="{{ post.url }}">Show more</a>
           </div>
           {%- endfor -%}
         </div>
-      </main>
+      </div>
+    </main>
 
-      <footer>
-        <div class="mb-5 mt-5">
-          {% include footer %}
-        </div>
-      </footer>
-  
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-            crossorigin="anonymous"></script>
-  </body>
+    <footer>
+      <div class="mb-5 mt-5">
+        {% include footer %}
+      </div>
+    </footer>
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
