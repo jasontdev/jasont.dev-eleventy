@@ -31,3 +31,12 @@ plentiful. My favourite approach for sites like this is to use a cloud storage b
 edge-caching and DDOS protections.
   
 ![Diagram of AWS infrastructure used to host jasont.dev](/img/projects/jasont.dev/jasontdev-hosting-diagram.png)
+  
+Unfortunately, updating content with CloudFront is currently cumbersome. When content is updated on the S3
+bucket, CloudFront will not update until the edge-distributed content expires. Because this site
+has low/infrequent, a short edge content expiry time will not help reduce load on the S3 bucket.  
+
+The current solution is to create a CloudFront content invalidation after updating content 
+on the S3 bucket, forcing CloudFront to distribute the updated content to the edge. In future,
+this can be automated by using a script to create an invalidation for the content that updates
+during S3 sync, or by moving the build process to a CodePipeline.
