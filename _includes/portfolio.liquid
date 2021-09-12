@@ -25,7 +25,7 @@
 
     <main>
       <div class="mt-5 px-2">
-        <h1>Portfolio</h1>
+        <h1 class="text-center">Portfolio</h1>
         <div class="d-flex flex-wrap justify-content-around">
           {%- for post in collections.project reversed -%}
           <div class="card mt-3" style="width: 19rem;">
@@ -33,7 +33,9 @@
             <div class="card-body">
               <h3 class="card-title">{{ post.data.title }}</h3>
               <p class="card-text">{{ post.data.description }}</p>
-              <a class="btn btn-primary" href="{{ post.url }}">Show more</a>
+              <div class="text-center">
+                <a class="btn btn-primary" href="{{ post.url }}">More info</a>
+              </div>
             </div>
           </div>
           {%- endfor -%}
