@@ -4,9 +4,9 @@ tags: project
 description: 'My professional website, blog and portfolio. Uses the Eleventy static site generator.'
 layout: post.liquid
 date: 2021-07-26 18:46:00 +10:00
-cardimg: /img/projects/jasont.dev/jasont.dev_thumb.png
+cardimg: /projects/jasont.dev/img/jasont.dev_thumb.png
 ---
-![Screenshot of jasont.dev rendered on mobile](/img/projects/jasont.dev/jasont.dev_thumb.png)  
+![Screenshot of jasont.dev rendered on mobile](./img/jasont.dev_thumb.png)  
 *jasont.dev rendered on mobile.*  
 ### Purpose
 The goal of my website is allow me to post blogs, tutorials, details about my projects, show my portfolio. 
@@ -23,14 +23,14 @@ The benefit of this approach is that Eleventy delivers a
 near-complete seperation of concerns between template and content. In the templates, we work hard to create the layout, style etc. In the markdown files from which Eleventy, little to no though need be given to the layout
 and styling.
   
-![Diagram showing process of building AWS](/img/projects/jasont.dev/jasontdev-build-process.png)
+![Diagram showing process of building AWS](./img/jasontdev-build-process.png)
 
 ### Hosting on AWS
 Being a static site, the options available for hosting are
 plentiful. My favourite approach for sites like this is to use a cloud storage bucket and load balancer. In this case, I'm using a web-hosting enabled AWS S3 bucket with CloudFront providing
 edge-caching and DDOS protections.
   
-![Diagram of AWS infrastructure used to host jasont.dev](/img/projects/jasont.dev/jasontdev-hosting-diagram.png)
+![Diagram of AWS infrastructure used to host jasont.dev](./img/jasontdev-hosting-diagram.png)
   
 Unfortunately, updating content with CloudFront is currently cumbersome. When content is updated on the S3
 bucket, CloudFront will not update until the edge-distributed content expires. Because this site

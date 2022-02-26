@@ -23,9 +23,9 @@
                 <div class="card mt-3">
                     <div class="card-body">
                         <div class="card-title">
-                            <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+                            <h3><a href="{{ post.url | url}}">{{ post.data.title }}</a></h3>
                         </div>
-                        <div class="card-subtitle text-muted">{{ post.data.date }}</div>
+                        <div class="card-subtitle text-muted">{{ post.data.date}}</div>
                         <div class="card-text">{{ post.data.description }}</div>
                     </div>
                 </div>

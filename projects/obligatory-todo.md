@@ -5,9 +5,10 @@ description: 'What developer portfolio could be complete without a to-do app? Us
 Firebase for persistence and authentication. Event-driven architecture.'
 layout: post.liquid
 date: 2021-09-03 18:46:00 +10:00
-cardimg: /img/projects/obligatory-todo/obligatory-todo-screen.png
+cardimg: /projects/obligatory-todo/img/obligatory-todo-screen.png
 ---
-![Screenshot of jasont.dev rendered on mobile](/img/projects/obligatory-todo/obligatory-todo-screen.png)  
+
+![Screenshot of jasont.dev rendered on mobile](./img/obligatory-todo-screen.png)  
 *Obligatory Todo rendered on mobile.*  
 ### Purpose
 I wanted to do a first React/Firebase app using a trivial, well-trodden idea so I could
@@ -29,7 +30,7 @@ request, but in response to Firebase data change events
 
 For example, when a new Todo is added, the component containing the text input box, NewTodo, creates an object and stores it with Firebase. NewTodo doesn't update the TodoList component but rather, Firebase sends the object to a listener in the TodoList component. TodoList will then merge data into the component state.
   
-![Adding new todo event cycle diagram](/img/projects/obligatory-todo/obligatory-todo-event-cycle.png)
+![Adding new todo event cycle diagram](./img/obligatory-todo-event-cycle.png)
 
 So really, Firebase isn't just used for persistence, but acts as a global datastore within the application. While this sounds like it could be slow and expensive, Firebase itself is internally event driven and performs local caching so the app isn't bogged down waiting for data to be fetched from the database.
 ### Try it out

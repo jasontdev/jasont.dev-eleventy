@@ -12,15 +12,8 @@
 
 <body>
   <div class="container">
-    <header>
-      <div class="d-flex justify-content-between">
-        <a href="#" class="navbar-brand text-dark">jasont.dev</a>
-        <nav class="nav">
-          <a href="/" class="nav-link">About</a>
-          <a href="/blog" class="nav-link">Blog</a>
-          <a href="/portfolio" class="nav-link">Portfolio</a>
-        </nav>
-      </div>
+      <header>        
+          {% include header %}
     </header>
 
     <main>
@@ -29,12 +22,12 @@
         <div class="d-flex flex-wrap justify-content-around">
           {%- for post in collections.project reversed -%}
           <div class="card mt-3" style="width: 19rem;">
-            <img class="card-img-top" src="{{ post.data.cardimg }}" alt="" class="card-img-top">
+            <img class="card-img-top" src="{{ post.data.cardimg | url }}" alt="" class="card-img-top">
             <div class="card-body">
-              <h3 class="card-title">{{ post.data.title }}</h3>
-              <p class="card-text">{{ post.data.description }}</p>
+              <h3 class="card-title">{{ post.data.title | url}}</h3>
+              <p class="card-text">{{ post.data.description | url}}</p>
               <div class="text-center">
-                <a class="btn btn-primary" href="{{ post.url }}">More info</a>
+                <a class="btn btn-primary" href="{{ post.url | url}}">More info</a>
               </div>
             </div>
           </div>
